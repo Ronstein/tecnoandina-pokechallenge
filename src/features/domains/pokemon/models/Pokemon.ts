@@ -1,0 +1,60 @@
+export type PokemonListItem = {
+  name: string,
+  url: string,
+}
+
+export type PokemonDetail = {
+  id: number,
+  name: string,
+  sprites: {
+    front_default?: string | null,
+    other?: {
+      "official-artwork"?: {
+        front_default?: string | null,
+        front_shiny?: string | null,
+      }
+      home?: {
+        front_default?: string | null,
+      }
+      dream_world?: {
+        front_default?: string | null,
+      }
+    }
+  },
+  base_experience: number
+  height: number
+  weight: number
+  types: { slot: number; type: { name: string, } }[]
+}
+
+export type PokemonSpecies = {
+  color: { name: string }
+}
+
+export type PokemonDetailWithSpecies = {
+  detail: PokemonDetail
+  species: PokemonSpecies
+}
+
+export const typeColors: Record<string, string> = {
+  normal: '#A8A77A',
+  fire: '#EE8130',
+  water: '#6390F0',
+  electric: '#F7D02C',
+  grass: '#7AC74C',
+  ice: '#96D9D6',
+  fighting: '#C22E28',
+  poison: '#A33EA1',
+  ground: '#E2BF65',
+  flying: '#A98FF3',
+  psychic: '#F95587',
+  bug: '#A6B91A',
+  rock: '#B6A136',
+  ghost: '#735797',
+  dragon: '#6F35FC',
+  dark: '#705746',
+  steel: '#B7B7CE',
+  fairy: '#D685AD',
+}
+
+// export const textDarkTypes = new Set(['electric', 'normal', 'fairy', 'ice', 'ground'])

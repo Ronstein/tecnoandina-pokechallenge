@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root {
+  --tecnoandina-blue: #7faee3;
+}
+
+@layer utilities {
+  .bg-tecnoandina {
+    background-color: var(--tecnoandina-blue);
+  }
+
+  .hover\:bg-tecnoandina-dark:hover {
+    background-color: color-mix(in srgb, var(--tecnoandina-blue) 90%, black);
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
