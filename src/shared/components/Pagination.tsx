@@ -24,7 +24,7 @@ export const Pagination = ({
                 disabled={disablePrev}
             >
                 <FaArrowLeft className="text-gray-700 dark:text-gray-200" />
-                <span className="hidden sm:inline text-gray-800 dark:text-gray-100">Anterior</span>
+                <span className="hidden sm:inline text-gray-800 dark:text-gray-100">Previous</span>
             </button>
 
             {/* Indicador de página */}
@@ -41,7 +41,7 @@ export const Pagination = ({
                 onClick={() => onChangePage(page + 1)}
                 disabled={disableNext}
             >
-                <span className="hidden sm:inline text-gray-800 dark:text-gray-100">Siguiente</span>
+                <span className="hidden sm:inline text-gray-800 dark:text-gray-100">Next</span>
                 <FaArrowRight className="text-gray-700 dark:text-gray-200" />
             </button>
         </div>
